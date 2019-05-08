@@ -1,0 +1,6 @@
+find_package时的路径要通过CMAKE_PREFIX_PATH变量来指定，CMAKE_PREFIX_PATH是一个以分号分割的路径列表。
+
+示例：
+include(FindProtobuf)
+set(CMAKE_PREFIX_PATH "${INSTALL_BASE_DIR};${CMAKE_PREFIX_PATH}")
+find_package(Protobuf REQUIRED)

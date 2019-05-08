@@ -1,0 +1,30 @@
+key,basename,ext,inc,libs,bin,pack,use,note,inc表示是否生成inc目录指令
+CMAKE,cmake-3.14.2,tar.gz,0,,,0,1,https://cmake.org/download/,pack表示是否打包libs和bin
+ASTYLE,astyle_3.1,tar.gz,0,,,0,1,https://sourceforge.net/projects/astyle/files/astyle/,use表示是否使用
+NASM,nasm-2.14.02,tar.xz,0,,,0,1,https://www.nasm.us/,
+CURL,curl-7.64.1,tar.xz,1,curl,curl,1,1,"1，https://curl.haxx.se/download.html
+2，依赖于openssl",
+GFLAGS,gflags-2.2.2,tar.gz,1,gflags,,1,1,https://github.com/gflags/gflags/releases,
+GTEST,googletest-release-1.8.1,tar.gz,1,gmock gtest,,1,1,https://github.com/google/googletest/releases,
+GPERFTOOLS,gperftools-2.7,tar.gz,1,tcmalloc profiler,pprof,1,1,https://github.com/gperftools/gperftools/releases,
+HIREDIS,hiredis-0.14.0,tar.gz,1,hiredis,,1,1,https://github.com/redis/hiredis/releases,
+JSONCPP,jsoncpp-1.8.4,tar.gz,1,jsoncpp,,1,1,https://github.com/open-source-parsers/jsoncpp/releases,
+LIBEVENT,libevent-2.1.8-stable,tar.gz,1,event_core event_extra event_pthreads event_openssl,,1,1,"1，http://libevent.org/
+2，依赖于openssl",
+LIBUNWIND,libunwind-1.3.1,tar.gz,1,unwind,,1,1,http://download.savannah.gnu.org/releases/libunwind/,
+LIBUUID,libuuid-1.0.3,tar.gz,1,uuid,,1,1,https://sourceforge.net/projects/libuuid/,
+LIBXML2,libxml2-2.9.9,tar.gz,1,xml2,,1,1,"1，ftp://xmlsoft.org/libxml2/
+2，依赖于libexpat1-dev (ubuntu) [expat-devel (centos)]
+3，依赖于zlib和xz",
+LOG4CPLUS,log4cplus-2.0.4,tar.xz,1,log4cplus,loggingserver,1,1,https://github.com/log4cplus/log4cplus/releases,
+OPENSSL,openssl-1.0.2r,tar.gz,1,crypto ssl,,1,1,"1，https://www.openssl.org/source/
+2，不要使用1.1版本，部分接口有变化",
+PROTOBUF,protobuf-3.7.1,tar.gz,1,protobuf,protoc,1,1,"1、https://github.com/google/protobuf/releases
+2、注意：更新protobuf版本后，一定要更新py_test中的google文件夹！！",
+RAPIDJSON,rapidjson-1.1.0,tar.gz,1,,,1,1,https://github.com/miloyip/rapidjson/releases,
+REDIS,redis-5.0.4,tar.gz,0,,,0,1,https://redis.io/,
+ZOOKEEPER,zookeeper-3.4.14,tar.gz,1,zookeeper_mt,,1,1,http://zookeeper.apache.org/,
+MYSQL_CLIENT,mysql-5.6.40,tar.gz,1,mysqlclient,,1,1,"1，https://dev.mysql.com/downloads/mysql/
+2，依赖于ncurses",未更新，新版本使用了cmake，不好用
+HTTP_PARSER,http-parser-2.9.2,tar.gz,1,http_parser,,1,1,https://github.com/nodejs/http-parser/releases,
+LIBB64,libb64-1.2.1,zip,1,b64,,1,1,https://sourceforge.net/projects/libb64/files/libb64/,
