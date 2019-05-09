@@ -33,11 +33,11 @@ if [ $(command -v apt-get) ]; then
     apt-get update # 如果是开发机，可以随便升级；如果是线上服务器，不要随便升级（注释掉）
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
-    PACKAGE_LIST="lsb-release unzip pigz valgrind"
+    PACKAGE_LIST="lsb-release unzip pigz valgrind libncurses5-dev"
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
-    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind"
+    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind ncurses-devel"
 else
     echo "not supported os"
     exit 1
