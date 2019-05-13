@@ -14,7 +14,7 @@ echo "build hiredis..."
 cd ${HIREDIS_SRC_DIR}
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    make -j ${LOGIC_CPU_COUNT} PREFIX=${HIREDIS_INSTALL_DIR}
+    make -j ${LOGIC_CPU_COUNT} PREFIX=${HIREDIS_INSTALL_DIR} OPTIMIZATION="-g -O0"
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
     make -j ${LOGIC_CPU_COUNT} PREFIX=${HIREDIS_INSTALL_DIR}
 else

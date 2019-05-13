@@ -22,9 +22,9 @@ ACLOCAL_PATH=/usr/share/aclocal ./autogen.sh
 chmod +x ./configure
 
 if [ "${BUILD_TYPE}"x = "debug"x ]; then
-    CFLAGS="-g -ggdb -O0 -I${OPENSSL_INSTALL_DIR}/include" LDFLAGS="-L${OPENSSL_INSTALL_DIR}/lib" ./configure --prefix=${LIBEVENT_INSTALL_DIR} --disable-gcc-warnings
+    CFLAGS="-g -O0 -I${OPENSSL_INSTALL_DIR}/include" LDFLAGS="-L${OPENSSL_INSTALL_DIR}/lib" ./configure --prefix=${LIBEVENT_INSTALL_DIR} --disable-gcc-warnings
 elif [ "${BUILD_TYPE}"x = "release"x ]; then
-    CFLAGS="-g -ggdb -O2 -I${OPENSSL_INSTALL_DIR}/include" LDFLAGS="-L${OPENSSL_INSTALL_DIR}/lib" ./configure --prefix=${LIBEVENT_INSTALL_DIR} --disable-gcc-warnings
+    CFLAGS="-g -O3 -I${OPENSSL_INSTALL_DIR}/include" LDFLAGS="-L${OPENSSL_INSTALL_DIR}/lib" ./configure --prefix=${LIBEVENT_INSTALL_DIR} --disable-gcc-warnings
 else
     echo "not supported build type: " ${BUILD_TYPE}
     exit 1

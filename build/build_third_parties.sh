@@ -64,16 +64,9 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
-    ./build_rapidjson.sh $1
+    ./build_libuuid.sh $1
     if [ $? -ne 0 ]; then
-        echo "failed to build rapidjson"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_jsoncpp.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build jsoncpp"
+        echo "failed to build libuuid"
         exit 1
     fi
 
@@ -81,13 +74,6 @@ function BuildAll
     ./build_libevent.sh $1 # 依赖openssl
     if [ $? -ne 0 ]; then
         echo "failed to build libevent"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_libuuid.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libuuid"
         exit 1
     fi
 
@@ -106,11 +92,46 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
+    ./build_http_parser.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build http parser"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
+    ./build_libb64.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build libb64"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
     ./build_protobuf.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build protobuf"
         exit 1
     fi
+
+    cd ${SCRIPT_PATH}
+    ./build_rapidjson.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build rapidjson"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
+    ./build_jsoncpp.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build jsoncpp"
+        exit 1
+    fi
+
+    cd ${SCRIPT_PATH}
+    ./build_mariadb_connector.sh $1
+    if [ $? -ne 0 ]; then
+        echo "failed to build mariadb connector"
+        exit 1
+    fi   
 
     cd ${SCRIPT_PATH}
     ./build_hiredis.sh $1
@@ -130,27 +151,6 @@ function BuildAll
     ./build_zookeeper.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build zookeeper"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_mysql_client.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build mysql client"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_http_parser.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build http parser"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
-    ./build_libb64.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libb64"
         exit 1
     fi
 
