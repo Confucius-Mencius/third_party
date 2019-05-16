@@ -120,13 +120,6 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
-    ./build_jsoncpp.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build jsoncpp"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
     ./build_mariadb_connector.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build mariadb connector"

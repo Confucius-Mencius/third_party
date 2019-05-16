@@ -30,7 +30,7 @@ fi
 
 ###############################################################################
 if [ $(command -v apt-get) ]; then
-    apt-get update # 如果是开发机，可以随便升级；如果是线上服务器，不要随便升级（注释掉）
+    apt-get update # 更新库
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
     PACKAGE_LIST="lsb-release unzip pigz valgrind automake libtool"
