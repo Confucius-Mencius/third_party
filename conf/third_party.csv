@@ -20,7 +20,6 @@ HTTP_PARSER,http-parser-2.9.2,tar.gz,1,http_parser,,1,1,https://github.com/nodej
 PROTOBUF,protobuf-3.7.1,tar.gz,1,protobuf,protoc,1,1,"1、https://github.com/google/protobuf/releases
 2、注意：更新protobuf版本后，一定要更新py_test中的google文件夹！！",
 RAPIDJSON,rapidjson-1.1.0,tar.gz,1,,,1,1,https://github.com/miloyip/rapidjson/releases,
-JSONCPP,jsoncpp-1.8.4,tar.gz,1,jsoncpp,,1,1,https://github.com/open-source-parsers/jsoncpp/releases,
 MARIADB_CONNECTOR,mariadb-connector-c-3.0.9-src,tar.gz,1,mariadb,,1,1,"1、https://downloads.mariadb.org/
 2、依赖于openssl",
 HIREDIS,hiredis-0.14.0,tar.gz,1,hiredis,,1,1,https://github.com/redis/hiredis/releases,
