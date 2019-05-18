@@ -17,7 +17,6 @@ LIBEVENT,libevent-2.1.8-stable,tar.gz,1,event_core event_extra event_pthreads ev
 LIBXML2,libxml2-2.9.9,tar.gz,1,xml2,,1,1,ftp://xmlsoft.org/libxml2/,
 LOG4CPLUS,log4cplus-2.0.4,tar.xz,1,log4cplus,loggingserver,1,1,https://github.com/log4cplus/log4cplus/releases,
 HTTP_PARSER,http-parser-2.9.2,tar.gz,1,http_parser,,1,1,https://github.com/nodejs/http-parser/releases,
-LIBB64,libb64-1.2.1,zip,1,b64,,1,1,https://sourceforge.net/projects/libb64/files/libb64/,
 PROTOBUF,protobuf-3.7.1,tar.gz,1,protobuf,protoc,1,1,"1、https://github.com/google/protobuf/releases
 2、注意：更新protobuf版本后，一定要更新py_test中的google文件夹！！",
 RAPIDJSON,rapidjson-1.1.0,tar.gz,1,,,1,1,https://github.com/miloyip/rapidjson/releases,

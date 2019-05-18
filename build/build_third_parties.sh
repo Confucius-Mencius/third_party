@@ -99,13 +99,6 @@ function BuildAll
     fi
 
     cd ${SCRIPT_PATH}
-    ./build_libb64.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libb64"
-        exit 1
-    fi
-
-    cd ${SCRIPT_PATH}
     ./build_protobuf.sh $1
     if [ $? -ne 0 ]; then
         echo "failed to build protobuf"
