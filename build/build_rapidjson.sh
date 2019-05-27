@@ -15,8 +15,13 @@ cd ${RAPIDJSON_SRC_DIR}
 
 sed -i -e 's!-Werror!-Wno-implicit-fallthrough!' ${RAPIDJSON_SRC_DIR}/CMakeLists.txt
 
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${RAPIDJSON_INSTALL_DIR} .
+if [ ! -d ${BUILD_TYPE}_build ]; then
+	mkdir ${BUILD_TYPE}_build
+fi
 
-make clean
+cd ${BUILD_TYPE}_build
+rm * -rf
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${RAPIDJSON_INSTALL_DIR} ..
+
 make -j ${LOGIC_CPU_COUNT}
 sudo make install
