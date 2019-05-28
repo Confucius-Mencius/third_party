@@ -16,7 +16,7 @@ cd ${RAPIDJSON_SRC_DIR}
 sed -i -e 's!-Werror!-Wno-implicit-fallthrough!' ${RAPIDJSON_SRC_DIR}/CMakeLists.txt
 
 if [ ! -d ${BUILD_TYPE}_build ]; then
-	mkdir ${BUILD_TYPE}_build
+    mkdir ${BUILD_TYPE}_build
 fi
 
 cd ${BUILD_TYPE}_build

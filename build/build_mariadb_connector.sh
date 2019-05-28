@@ -13,8 +13,14 @@ echo "build mariadb connector..."
 
 cd ${MARIADB_CONNECTOR_SRC_DIR}
 
+if [ ! -d ${BUILD_TYPE}_build ]; then
+    mkdir ${BUILD_TYPE}_build
+fi
+
+cd ${BUILD_TYPE}_build
+rm * -rf
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${MARIADB_CONNECTOR_INSTALL_DIR} \
-    -DCMAKE_PREFIX_PATH="${CURL_INSTALL_DIR};${OPENSSL_INSTALL_DIR}" -DWITH_CURL=OFF .
+    -DCMAKE_PREFIX_PATH="${CURL_INSTALL_DIR};${OPENSSL_INSTALL_DIR}" -DWITH_CURL=OFF ..
 
 make clean
 make -j ${LOGIC_CPU_COUNT}

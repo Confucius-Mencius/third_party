@@ -14,7 +14,13 @@ echo "build gtest..."
 cd ${GTEST_SRC_DIR}
 cp -f ${PATCH_DIR}/${GTEST_BASENAME}/googletest/cmake/internal_utils.cmake ./googletest/cmake/
 
-CXXFLAGS="-fPIC" /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} .
+if [ ! -d ${BUILD_TYPE}_build ]; then
+    mkdir ${BUILD_TYPE}_build
+fi
+
+cd ${BUILD_TYPE}_build
+rm * -rf
+CXXFLAGS="-fPIC" /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} ..
 
 make clean
 make -j ${LOGIC_CPU_COUNT}

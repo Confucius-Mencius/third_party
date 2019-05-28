@@ -22,5 +22,5 @@ else
     exit 1
 fi
 
-make clean
+sudo rm ${HTTP_PARSER_INSTALL_DIR}/lib/*
 sudo make PREFIX=${HTTP_PARSER_INSTALL_DIR} install
