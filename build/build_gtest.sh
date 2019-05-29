@@ -19,10 +19,9 @@ if [ ! -d ${BUILD_TYPE}_build ]; then
 fi
 
 cd ${BUILD_TYPE}_build
-rm * -rf
-CXXFLAGS="-fPIC" /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} ..
 
-make -j ${LOGIC_CPU_COUNT}
+CXXFLAGS="-fPIC" /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} -DCMAKE_INSTALL_PREFIX=${GTEST_INSTALL_DIR} ..
+${RUN_MAKE_CMD}
 
 if [ ! -d ${GTEST_INSTALL_DIR}/include ]; then
     sudo mkdir -p ${GTEST_INSTALL_DIR}/include

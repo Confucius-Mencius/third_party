@@ -19,9 +19,8 @@ if [ ! -d ${BUILD_TYPE}_build ]; then
 fi
 
 cd ${BUILD_TYPE}_build
-rm * -rf
-/usr/bin/cmake -G ${CMAKE_GENERATOR} -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr ..
 
+/usr/bin/cmake -G ${CMAKE_GENERATOR} -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr ..
 ${RUN_MAKE_CMD}
 ${RUN_INSTALL_CMD}
 
