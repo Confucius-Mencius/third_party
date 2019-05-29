@@ -30,8 +30,6 @@ else
     exit 1
 fi
 
-make clean
-
 if [ ${EVBUFFER_MAX_READ_16384} -eq 1 ]; then
     cp -f ${PATCH_DIR}/${LIBEVENT_BASENAME}/buffer.c ./
 fi

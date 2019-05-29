@@ -15,6 +15,5 @@ cd ${CMAKE_SRC_DIR}
 chmod +x ./configure
 ./configure --prefix=/usr
 
-make clean
 make -j ${LOGIC_CPU_COUNT}
 sudo make install

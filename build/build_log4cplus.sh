@@ -24,8 +24,6 @@ else
     exit 1
 fi
 
-make clean
-
 cp -f ${PATCH_DIR}/${LOG4CPLUS_BASENAME}/src/threads.cxx ./src/
 
 make -j ${LOGIC_CPU_COUNT}

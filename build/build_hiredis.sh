@@ -22,5 +22,4 @@ else
     exit 1
 fi
 
-make clean
 sudo make PREFIX=${HIREDIS_INSTALL_DIR} install

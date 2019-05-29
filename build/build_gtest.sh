@@ -22,7 +22,6 @@ cd ${BUILD_TYPE}_build
 rm * -rf
 CXXFLAGS="-fPIC" /usr/bin/cmake -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE_VALUE} ..
 
-make clean
 make -j ${LOGIC_CPU_COUNT}
 
 if [ ! -d ${GTEST_INSTALL_DIR}/include ]; then

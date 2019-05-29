@@ -24,7 +24,6 @@ else
     exit 1
 fi
 
-make clean
 make -j ${LOGIC_CPU_COUNT}
 sudo make install
 
