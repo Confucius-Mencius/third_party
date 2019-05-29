@@ -25,5 +25,5 @@ MARIADB_CONNECTOR,mariadb-connector-c-3.0.9-src,tar.gz,1,mariadb,,1,1,"1、https
 HIREDIS,hiredis-0.14.0,tar.gz,1,hiredis,,1,1,https://github.com/redis/hiredis/releases,
 REDIS,redis-5.0.4,tar.gz,0,,,0,1,https://redis.io/,
 ZOOKEEPER,zookeeper-3.4.14,tar.gz,1,zookeeper_mt,,1,1,http://zookeeper.apache.org/,
-AWS_SDK_CPP,aws-sdk-cpp-1.7.111,tar.gz,1,aws-cpp-sdk-core aws-cpp-sdk-sts aws-cpp-sdk-s3,,1,1,"1、https://github.com/aws/aws-sdk-cpp/releases
+AWS_SDK_CPP,aws-sdk-cpp-1.7.111,tar.gz,1,aws-cpp-sdk-core aws-cpp-sdk-sts aws-cpp-sdk-transfer aws-cpp-sdk-s3,,1,1,"1、https://github.com/aws/aws-sdk-cpp/releases
 2、依赖于openss curl",
