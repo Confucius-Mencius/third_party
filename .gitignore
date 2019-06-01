@@ -34,8 +34,8 @@ output/
 *.pyc
 archives/**/
 build_*_time.txt
-build_*.err
-unzip_all.err
+build_*.error.log
+unzip_all.error.log
 /bin
 /lib
 
