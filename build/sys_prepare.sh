@@ -37,7 +37,7 @@ if [ $(command -v apt-get) ]; then
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
-    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind"
+    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind zlib-devel"
 else
     echo "not supported os"
     exit 1
