@@ -14,9 +14,8 @@ cd ${ASTYLE_SRC_DIR}
 
 BUILD_TYPE=release
 
-if [ ! -d ${BUILD_TYPE}_build ]; then
-    mkdir ${BUILD_TYPE}_build
-fi
+rm -rf ${BUILD_TYPE}_build
+mkdir ${BUILD_TYPE}_build
 
 cd ${BUILD_TYPE}_build
 

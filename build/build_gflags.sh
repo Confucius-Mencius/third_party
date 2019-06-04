@@ -25,9 +25,8 @@ cd ${GFLAGS_SRC_DIR}
 
 sed -i -e 's!set(CMAKE_DEBUG_POSTFIX "_debug")!#set(CMAKE_DEBUG_POSTFIX "_debug")!' ./CMakeLists.txt
 
-if [ ! -d ${BUILD_TYPE}_build ]; then
-    mkdir ${BUILD_TYPE}_build
-fi
+rm -rf ${BUILD_TYPE}_build
+mkdir ${BUILD_TYPE}_build
 
 cd ${BUILD_TYPE}_build
 

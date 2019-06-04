@@ -15,9 +15,8 @@ cd ${AWS_SDK_CPP_SRC_DIR}
 
 sed -i -e 's!list(APPEND AWS_COMPILER_WARNINGS "-Wall" "-Werror" "-pedantic" "-Wextra")!list(APPEND AWS_COMPILER_WARNINGS "-Wall" "-pedantic" "-Wextra")!' ./cmake/compiler_settings.cmake
 
-if [ ! -d ${BUILD_TYPE}_build ]; then
-    mkdir ${BUILD_TYPE}_build
-fi
+rm -rf ${BUILD_TYPE}_build
+mkdir ${BUILD_TYPE}_build
 
 cd ${BUILD_TYPE}_build
 

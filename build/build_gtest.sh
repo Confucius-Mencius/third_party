@@ -14,9 +14,8 @@ echo "build gtest..."
 cd ${GTEST_SRC_DIR}
 cp -f ${PATCH_DIR}/${GTEST_BASENAME}/googletest/cmake/internal_utils.cmake ./googletest/cmake/
 
-if [ ! -d ${BUILD_TYPE}_build ]; then
-    mkdir ${BUILD_TYPE}_build
-fi
+rm -rf ${BUILD_TYPE}_build
+mkdir ${BUILD_TYPE}_build
 
 cd ${BUILD_TYPE}_build
 
