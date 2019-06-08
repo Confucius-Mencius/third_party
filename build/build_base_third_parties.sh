@@ -21,19 +21,19 @@ function BuildAll
 
     echo `date` >build_base_third_parties_time.txt
 
-    cd ${SCRIPT_PATH}
-    ./build_openssl.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build openssl"
-        exit 1
-    fi
+    # cd ${SCRIPT_PATH}
+    # ./build_openssl.sh $1
+    # if [ $? -ne 0 ]; then
+    #     echo "failed to build openssl"
+    #     exit 1
+    # fi
     
-    cd ${SCRIPT_PATH}
-    ./build_curl.sh $1 # 依赖openssl
-    if [ $? -ne 0 ]; then
-        echo "failed to build curl"
-        exit 1
-    fi
+    # cd ${SCRIPT_PATH}
+    # ./build_curl.sh $1 # 依赖openssl
+    # if [ $? -ne 0 ]; then
+    #     echo "failed to build curl"
+    #     exit 1
+    # fi
 
     cd ${SCRIPT_PATH}
     ./build_gflags.sh $1
@@ -63,12 +63,12 @@ function BuildAll
         exit 1
     fi
 
-    cd ${SCRIPT_PATH}
-    ./build_libuuid.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libuuid"
-        exit 1
-    fi
+    # cd ${SCRIPT_PATH}
+    # ./build_libuuid.sh $1
+    # if [ $? -ne 0 ]; then
+    #     echo "failed to build libuuid"
+    #     exit 1
+    # fi
 
     cd ${SCRIPT_PATH}
     ./build_libevent.sh $1 # 依赖openssl
@@ -77,12 +77,12 @@ function BuildAll
         exit 1
     fi
 
-    cd ${SCRIPT_PATH}
-    ./build_libxml2.sh $1
-    if [ $? -ne 0 ]; then
-        echo "failed to build libxml2"
-        exit 1
-    fi
+    # cd ${SCRIPT_PATH}
+    # ./build_libxml2.sh $1
+    # if [ $? -ne 0 ]; then
+    #     echo "failed to build libxml2"
+    #     exit 1
+    # fi
 
     cd ${SCRIPT_PATH}
     ./build_log4cplus.sh $1

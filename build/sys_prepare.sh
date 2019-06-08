@@ -33,11 +33,11 @@ if [ $(command -v apt-get) ]; then
     apt-get update # 更新库
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
-    PACKAGE_LIST="lsb-release unzip pigz valgrind automake libtool zlib1g-dev"
+    PACKAGE_LIST="lsb-release unzip pigz valgrind automake libtool zlib1g-dev" # uuid-dev libxml2-dev openssl libssl-dev curl libcurl4-openssl-dev
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
-    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind zlib-devel"
+    PACKAGE_LIST="redhat-lsb xz unzip pigz valgrind zlib-devel" # openssl-devel curl-devel
 else
     echo "not supported os"
     exit 1
