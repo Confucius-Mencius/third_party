@@ -33,7 +33,7 @@ if [ $(command -v apt-get) ]; then
     apt-get update # 更新库
     apt-get install build-essential -y
     PACKAGE_MGR="apt-get"
-    PACKAGE_LIST="lsb-release unzip pigz valgrind automake libtool zlib1g-dev" # uuid-dev libxml2-dev openssl libssl-dev curl libcurl4-openssl-dev
+    PACKAGE_LIST="lsb-release unzip pigz valgrind automake libtool zlib1g-dev uuid-dev libxml2-dev openssl libssl-dev curl libcurl4-openssl-dev"
 elif [ $(command -v yum) ]; then
     yum groupinstall "Development tools" -y
     PACKAGE_MGR="yum"
@@ -46,3 +46,5 @@ fi
 if [ ! x"${PACKAGE_LIST}" = x ]; then
     ${PACKAGE_MGR} install ${PACKAGE_LIST} -y
 fi
+
+sudo ln -s /usr/include/libxml2/libxml /usr/include/libxml
